@@ -1,0 +1,59 @@
+@import '_null.scss';
+@import '_mixin';
+@import '_popup';
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+}
+html {
+  &.lock {
+    overflow: hidden;
+  }
+}
+body {
+  color: $black;
+  font-size: 20px;
+  font-family: 'TTRegular';
+  font-weight: 400;
+  font-style: normal;
+  &._lock {
+    overflow: hidden;
+  }
+  &.lock {
+    overflow: hidden;
+  }
+}
+main {
+  flex: 100%;
+}
+
+[class*='__container'] {
+  max-width: 1328px;
+  margin: 0 auto;
+  padding: 0px 24px;
+  @media (max-width: $laptop) {
+    max-width: 1200px;
+  }
+  @media (max-width: 375px) {
+    padding: 0px 10px;
+  }
+}
+
+@import '_header';
+@import '_intro';
+@import '_policy';
+@import '_work';
+@import '_products';
+@import '_production';
+@import '_quiz';
+@import '_quize';
+@import '_reviews';
+@import '_about';
+@import '_video';
+@import '_probe';
+@import '_footer';
+@import '_catalog';

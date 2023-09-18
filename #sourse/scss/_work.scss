@@ -1,0 +1,308 @@
+.work {
+  padding: 120px 0px;
+  @media (max-width: $tablet) {
+    padding: 60px 0px;
+  }
+  @media (max-width: $mobile) {
+    padding: 24px 0px;
+  }
+  &__container {
+  }
+
+  &__title {
+    font-size: 64px;
+    font-style: normal;
+    font-family: 'TTRegular';
+    line-height: 110%;
+    color: $black;
+    margin-bottom: 80px;
+    @media (max-width: $laptop) {
+      font-size: 50px;
+      margin-bottom: 60px;
+    }
+    mark {
+      @media (min-width: $mobile) {
+        color: $white;
+        background-color: $purple;
+        border-radius: 10px;
+        font-family: 'TTBold';
+        padding: 0px 5px;
+      }
+      @media (max-width: $mobile) {
+        background-color: inherit;
+        color: $black;
+      }
+    }
+    span {
+      font-family: 'TTBold';
+      @media (max-width: $mobile) {
+        font-family: 'TTMedium';
+      }
+    }
+    @media (max-width: $tablet) {
+      font-size: 44px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 44px;
+      font-size: 32px;
+      font-family: 'TTMedium';
+      margin-bottom: 24px;
+    }
+  }
+
+  &__body {
+    position: relative;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #faaf1c 0%, #d36718 100%);
+    cursor: pointer;
+    &_prew {
+      left: -36px;
+      img {
+        transform: rotate(180deg);
+      }
+      @media (max-width: $laptop) {
+        left: -72px;
+      }
+      @media (max-width: $tablet) {
+        left: -36px;
+      }
+      @media (max-width: $mobile) {
+        left: -24px;
+      }
+    }
+    &_next {
+      right: -36px;
+      @media (max-width: $laptop) {
+        right: -72px;
+      }
+      @media (max-width: $tablet) {
+        right: -36px;
+      }
+      @media (max-width: $mobile) {
+        right: -24px;
+      }
+    }
+    @media (max-width: $pc) {
+      width: 48px;
+      height: 48px;
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    @media (max-width: $tablet) {
+      top: calc(35vw - 48px);
+      transform: translate(0, 0);
+    }
+  }
+
+  &__block {
+    overflow: hidden;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__slide {
+    flex: 0 0 100%;
+    display: flex;
+    gap: 40px;
+    @media (max-width: $tablet) {
+      display: block;
+    }
+  }
+
+  &__left {
+    flex: 0 1 50%;
+    @media (max-width: $tablet) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__bigimg {
+    width: 100%;
+    padding-bottom: 69%;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  &__images {
+    width: 100%;
+    display: flex;
+    margin-top: 16px;
+    gap: 16px;
+  }
+
+  &__img {
+    flex: 0 1 33.333%;
+    border-radius: 8px;
+    padding-bottom: 23%;
+    cursor: pointer;
+  }
+
+  &__right {
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-size: 30px;
+    margin-top: -7px;
+    font-style: normal;
+    font-family: 'TTMedium';
+    line-height: 120%;
+    margin-bottom: 24px;
+    @media (max-width: $laptop) {
+      font-size: 24px;
+      margin-top: -4px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 24px;
+    }
+  }
+
+  &__texts {
+    font-size: 16px;
+    font-style: normal;
+    font-family: 'TTRegular';
+    line-height: 140%;
+    margin-bottom: 30px;
+    p {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+    @media (max-width: $laptop) {
+      font-size: 15px;
+    }
+    @media (max-width: $tablet) {
+      font-size: 16px;
+    }
+  }
+
+  &__values {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    flex: 1 1 auto;
+    @media (max-width: $laptop) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+
+  &__value {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__icon {
+  }
+
+  &__size {
+    p {
+      font-size: 24px;
+      font-style: normal;
+      font-family: 'TTMedium';
+      line-height: 100%;
+    }
+    span {
+      font-size: 14px;
+      font-style: normal;
+      font-family: 'TTRegular';
+    }
+  }
+
+  &__button {
+  }
+}
+.button-work {
+  border-radius: 24px;
+  background: linear-gradient(180deg, #faaf1c 0%, #d36718 100%);
+  display: inline-flex;
+  padding: 24px 40px;
+  width: 482px;
+  @media (max-width: $laptop) {
+    padding: 14px 30px;
+    width: 400px;
+  }
+  @media (max-width: $mobile) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  @media (max-width: 1050px) {
+    padding: 20px 20px;
+  }
+  &__icon {
+    margin-right: 24px;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__texts {
+    color: $white;
+  }
+
+  &__name {
+    font-size: 32px;
+    font-style: normal;
+    font-family: 'TTMedium';
+    margin-bottom: 8px;
+    @media (max-width: $laptop) {
+      font-size: 26px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 24px;
+    }
+  }
+
+  &__subname {
+    font-size: 14px;
+    font-style: italic;
+    font-family: 'TTMedium';
+  }
+}
+
+.swiper__container {
+  margin: 0;
+}
+
+.swiper-pagination {
+  margin-top: 48px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  @media (max-width: $mobile) {
+    margin-top: 24px;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #bfbfbf;
+  cursor: pointer;
+
+  &-active {
+    background-color: $orange;
+  }
+}

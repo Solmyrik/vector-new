@@ -1,0 +1,91 @@
+.footer {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @media (max-width: $tablet) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__logo {
+    img {
+      width: 219px;
+    }
+  }
+
+  &__menu {
+  }
+
+  &__name {
+    font-size: 24px;
+    font-family: 'TTMedium';
+    margin-bottom: 10px;
+  }
+
+  &__list {
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    color: $black;
+    border-bottom: 1px solid $black;
+  }
+
+  &__phones {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__phone {
+    font-size: 32px;
+    font-family: 'TTMedium';
+    color: $black;
+    transition: color 0.3s;
+    margin-bottom: 23px;
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__local {
+    display: flex;
+    gap: 8px;
+    p {
+      font-size: 16px;
+      line-height: 140%;
+
+      max-width: 250px;
+    }
+  }
+
+  &__icon {
+  }
+
+  &__copy {
+    font-size: 16px;
+    line-height: 140%;
+    span {
+      color: $purple;
+      border-bottom: 1px solid $purple;
+      cursor: pointer;
+    }
+  }
+}

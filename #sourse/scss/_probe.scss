@@ -1,0 +1,119 @@
+.probe {
+  background-color: $purple;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  @media (max-width: $laptop) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @media (max-width: $tablet) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  &__container {
+    color: $white;
+  }
+
+  &__body {
+    display: flex;
+    gap: 40px;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+
+  &__left {
+    flex: 0 1 55%;
+    background-color: #2e0d6a;
+    border-radius: 8px;
+  }
+
+  &__img {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__right {
+    flex: 0 1 45%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin-bottom: 17px;
+    span {
+      color: $white;
+      background: linear-gradient(180deg, #faaf1c 0%, #d36718 100%);
+      border-radius: 10px;
+
+      padding: 0px 3px;
+    }
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__name {
+    font-family: 'TTMedium';
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 120%;
+    margin-bottom: 24px;
+    @media (max-width: $tablet) {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    font-family: 'Gilroy';
+    margin-bottom: 24px;
+    flex: 1 1 auto;
+    @media (max-width: $tablet) {
+      font-size: 16px;
+    }
+  }
+  .bottom-about__button {
+    padding: 16px 24px;
+  }
+}
+.catalog {
+  &__buttons {
+  }
+}
+.bottom-about {
+  &__button {
+  }
+
+  &__icon {
+  }
+
+  &__texts {
+  }
+}
+.telegram2 {
+}
+.whatsapp2 {
+}
+
+.probe__title_mob {
+  display: none;
+  @media (max-width: $tablet) {
+    display: block;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    font-family: 'TTMedium';
+    margin-bottom: 24px;
+  }
+}

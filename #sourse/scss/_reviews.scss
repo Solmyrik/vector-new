@@ -1,0 +1,242 @@
+.reviews {
+  &__container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    @media (max-width: $tablet) {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+  &__title {
+    font-size: 64px;
+    font-style: normal;
+    font-family: 'TTRegular';
+    line-height: 110%;
+    margin-bottom: 40px;
+    span {
+      font-family: 'TTBold';
+    }
+    @media (max-width: $laptop) {
+      font-size: 50px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 32px;
+      font-style: normal;
+      font-family: 'TTMedium';
+      margin-bottom: 24px;
+      span {
+        font-family: 'TTMedium';
+      }
+    }
+  }
+
+  &__top {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #faf9f6;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    display: none;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__icon {
+  }
+
+  &__value {
+    font-size: 24px;
+    font-style: normal;
+    font-family: 'TTMedium';
+  }
+
+  &__text {
+    font-size: 16px;
+  }
+
+  &__stars {
+  }
+
+  &__right {
+    @media (max-width: $mobile) {
+      display: flex;
+      width: 100%;
+    }
+  }
+  &__button {
+    border-radius: 24px;
+    background: linear-gradient(180deg, #faaf1c 0%, #d36718 100%);
+    font-size: 24px;
+    font-style: normal;
+    font-family: 'TTMedium';
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 40px;
+    @media (max-width: $tablet) {
+      padding: 24px;
+    }
+    @media (max-width: $mobile) {
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__all {
+    cursor: pointer;
+    border-radius: 24px;
+    background: linear-gradient(180deg, #faaf1c 0%, #d36718 100%);
+    font-size: 24px;
+    font-style: normal;
+    font-family: 'TTMedium';
+    color: $white;
+    display: inline-flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 40px;
+  }
+
+  &__body {
+  }
+
+  &__items {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    @media (max-width: $laptop) {
+      gap: 20px;
+      row-gap: 40px;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__item {
+    flex: 0 1 calc(33.333% - 27px);
+    background-color: #faf9f6;
+    border-radius: 16px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    @media (max-width: $pc) {
+      flex: 0 1 calc(33.333% - 14px);
+    }
+    @media (max-width: 1200px) {
+      flex: 0 1 calc(50% - 10px);
+    }
+    @media (max-width: $mobile) {
+      flex: 0 1 100%;
+      padding: 24px;
+    }
+    &.none {
+      display: none;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__head {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__avatar {
+    img {
+      border-radius: 50%;
+      width: 73px;
+      height: 73px;
+    }
+  }
+
+  &__names {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__name {
+    font-size: 24px;
+    font-style: normal;
+    font-family: 'TTMedium';
+    line-height: 130%;
+  }
+
+  &__time {
+    font-size: 16px;
+    font-style: normal;
+    font-family: 'TTRegular';
+    line-height: 140%;
+  }
+
+  &__content {
+    font-size: 16px;
+    font-style: normal;
+    font-family: 'TTRegular';
+    line-height: 140%;
+    flex: 1 1 auto;
+  }
+
+  &__links {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__link {
+    font-size: 20px;
+    font-style: normal;
+    font-family: 'TTRegular';
+    line-height: 140%;
+    text-decoration-line: underline;
+    color: $purple;
+  }
+
+  &__icon-link {
+  }
+}
+.stars {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  &__item {
+    img {
+      width: 16px;
+    }
+  }
+}

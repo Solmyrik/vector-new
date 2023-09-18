@@ -1,0 +1,61 @@
+01.07 02:23 Array
+(
+)
+
+01.07 02:45 Array
+(
+    [currentPhone] => +7 (435) 345-43-55
+    [currentName] => test
+    [currentEmail] => test@dsgf.fd
+    [children] => 1
+    [incomeInput] => 0
+    [familyMembersInput] => 2
+    [hourseSelect] => 0
+    [apartamentSelect] => 0
+    [hourseMetersInput] => 
+    [areaMetersInput] => 
+    [apartmentMetersInput] => 
+    [carSelect] => 0
+    [carYearInput] => 
+    [carHourseInput] => 
+    [disabled] => нет
+)
+
+01.07 02:49 Array
+(
+    [currentPhone] => +7 (435) 345-43-55
+    [currentName] => test
+    [currentEmail] => test@dsgf.fd
+    [children] => 1
+    [incomeInput] => 0
+    [familyMembersInput] => 2
+    [hourseSelect] => 0
+    [apartamentSelect] => 0
+    [hourseMetersInput] => 
+    [areaMetersInput] => 
+    [apartmentMetersInput] => 
+    [carSelect] => 0
+    [carYearInput] => 
+    [carHourseInput] => 
+    [disabled] => нет
+)
+
+01.07 02:49 Array
+(
+    [currentPhone] => +7 (435) 345-43-55
+    [currentName] => test
+    [currentEmail] => test@dsgf.fd
+    [children] => 1
+    [incomeInput] => 0
+    [familyMembersInput] => 2
+    [hourseSelect] => 0
+    [apartamentSelect] => 0
+    [hourseMetersInput] => 
+    [areaMetersInput] => 
+    [apartmentMetersInput] => 
+    [carSelect] => 0
+    [carYearInput] => 
+    [carHourseInput] => 
+    [disabled] => нет
+)
+

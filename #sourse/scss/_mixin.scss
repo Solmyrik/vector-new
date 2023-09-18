@@ -1,0 +1,146 @@
+html {
+  scroll-behavior: smooth;
+}
+// resolution
+$laptop: 1441px;
+$pc: 1328px;
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+//colors
+$purple: #391085;
+$white: #ffffff;
+$black: #262626;
+$orange: #d36718;
+$gray: #a5a19e;
+$light: #f9fafc;
+$light-blue: #bbcef2;
+
+@font-face {
+  font-family: 'TTMedium';
+  src: url('../fonts/TTMedium.woff') format('woff'), url('../fonts/TTMedium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TTRegular';
+  src: url('../fonts/TTRegular.woff') format('woff'),
+    url('../fonts/TTRegular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TTItalic';
+  src: url('../fonts/TTItalic.woff') format('woff'), url('../fonts/TTItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'TTBold';
+  src: url('../fonts/TTBold.woff') format('woff'), url('../fonts/TTBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  img {
+    display: none;
+  }
+}
+
+.gallery__popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+  padding: 10px;
+}
+
+.gallery__popup.active {
+  display: block;
+}
+
+.gallery__popup span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 60px;
+  font-weight: bolder;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 100;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.gallery__popup span:hover {
+  color: #9ea1a2;
+}
+
+.gallery__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+  object-fit: cover;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.gallery__arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 150;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  img {
+    top: 50%;
+    width: 40.5px;
+    height: 40.5px;
+  }
+  @media (max-width: $mobile) {
+    width: 60px;
+    height: 60px;
+    img {
+      width: 55.5px;
+      height: 55.5px;
+    }
+  }
+}
+.gallery__arrow-next {
+  left: 52%;
+  transform: translate(-50%, 0);
+  @media (max-width: $mobile) {
+    left: 59%;
+    img {
+      height: 54.5px;
+    }
+  }
+}
+.gallery__arrow-prev {
+  left: 48%;
+  transform: translate(-50%, 0) rotate(180deg);
+  @media (max-width: $mobile) {
+    left: 41%;
+  }
+}

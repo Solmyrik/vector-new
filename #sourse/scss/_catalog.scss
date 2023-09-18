@@ -1,0 +1,295 @@
+.catalog {
+  background-color: $purple;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  @media (max-width: $laptop) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @media (max-width: $tablet) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  &__container {
+    color: $white;
+  }
+
+  &__title {
+    font-size: 64px;
+    font-style: normal;
+    font-family: 'TTRegular';
+    line-height: 110%;
+    text-align: center;
+    color: $white;
+    margin-bottom: 80px;
+    mark {
+      @media (min-width: $tablet) {
+        color: $white;
+        background: linear-gradient(180deg, #faaf1c 0%, #d36718 100%);
+        border-radius: 10px;
+
+        padding: 0px 5px;
+      }
+      @media (max-width: $tablet) {
+        background-color: inherit;
+        color: $white;
+      }
+    }
+    @media (max-width: $laptop) {
+      font-size: 44px;
+      max-width: 869px;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 60px;
+    }
+    @media (max-width: $tablet) {
+      text-align: left;
+      font-size: 44px;
+      font-size: 32px;
+      font-family: 'TTMedium';
+      margin-bottom: 24px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    padding: 40px 40px 70px 40px;
+    border-radius: 16px;
+    border: 1px solid $white;
+    align-items: center;
+    gap: 24px;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      padding: 24px;
+    }
+    &_sad {
+      padding: 30px 40px 40px 40px;
+    }
+  }
+
+  &__left {
+    flex: 0 1 59%;
+    position: relative;
+    &_sad {
+      flex: 0 1 40%;
+    }
+  }
+
+  &__image {
+    padding-top: 40px;
+    img {
+      width: 100%;
+      transform: rotate(-3deg);
+    }
+    &_sad {
+      display: flex;
+      justify-content: center;
+      padding-top: 0;
+      img {
+        width: 60%;
+        transform: rotate(0);
+      }
+    }
+  }
+
+  &__right {
+    flex: 0 1 41%;
+    &_sad {
+      flex: 0 1 60%;
+    }
+  }
+  &__decor {
+    position: absolute;
+    right: 36px;
+    top: -13px;
+    z-index: 2;
+    @media (max-width: $tablet) {
+      right: 3%;
+      top: 7%;
+    }
+    @media (max-width: $mobile) {
+      right: 2%;
+      top: 10%;
+    }
+    img {
+      width: 87px;
+      height: 87px;
+    }
+    @media (max-width: $tablet) {
+      img {
+        width: 54px;
+        height: 54px;
+      }
+    }
+  }
+
+  &__name {
+    font-size: 32px;
+    font-style: normal;
+    margin-bottom: 24px;
+    font-family: 'TTMedium';
+    @media (max-width: $laptop) {
+      font-size: 29px;
+    }
+    @media (max-width: $tablet) {
+      font-size: 24px;
+      line-height: 130%;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__text {
+    font-family: 'Gilroy';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 24px;
+    @media (max-width: $tablet) {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    padding: 24px 40px;
+    border-radius: 24px;
+    background-color: $white;
+    max-width: 386px;
+    gap: 24px;
+    position: relative;
+    @media (max-width: $mobile) {
+      gap: 12px;
+      padding: 16px 24px;
+    }
+    &_sad {
+      align-items: center;
+      .bottom-about__texts {
+        height: 20px;
+      }
+    }
+  }
+
+  &__icon {
+    img {
+      width: 48px;
+      height: 48px;
+      @media (max-width: $mobile) {
+        width: 48px;
+        height: 48px;
+      }
+    }
+    // @media (max-width: $mobile) {
+    //   display: none;
+    // }
+  }
+
+  &__texts {
+    color: $black;
+    p {
+      font-family: 'TTMedium';
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 140%;
+      @media (max-width: $tablet) {
+        font-size: 16px;
+      }
+    }
+    span {
+      font-family: 'TTItalic';
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 140%;
+    }
+  }
+  &__buttons {
+    display: flex;
+    gap: 10px;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+}
+
+.catalog-f {
+  border-radius: 16px;
+  border: 1px solid $white;
+  padding: 40px;
+  @media (max-width: $mobile) {
+    padding: 24px;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    flex: 0 1 calc(33.333% - 30px);
+    @media (max-width: $mobile) {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__img {
+    margin-bottom: 16px;
+    img {
+      border-radius: 18px;
+      width: 100%;
+    }
+  }
+
+  &__name {
+    text-align: center;
+    font-family: 'Gilroy';
+    font-size: 20px;
+  }
+
+  &__bottom {
+    display: flex;
+    gap: 40px;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+    @media (max-width: $mobile) {
+      gap: 16px;
+    }
+  }
+
+  &__left {
+    flex: 0 1 50%;
+  }
+
+  &__textbig {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 10px;
+    @media (max-width: $mobile) {
+      font-size: 24px;
+      line-height: 130%;
+    }
+  }
+
+  &__text {
+    font-family: 'Gilroy';
+    font-size: 20px;
+    line-height: 140%;
+  }
+  &__right {
+    flex: 0 1 50%;
+    display: flex;
+    gap: 40px;
+    a {
+      flex: 0 1 50%;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+}

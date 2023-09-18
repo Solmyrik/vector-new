@@ -1,0 +1,299 @@
+.quiz {
+  position: relative;
+  height: 1081px;
+  @media (max-width: $laptop) {
+    height: 961px;
+  }
+  @media (max-width: $tablet) {
+    height: auto;
+    background-color: $black;
+  }
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1081px;
+    @media (max-width: $laptop) {
+      height: 961px;
+    }
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    @media (max-width: $laptop) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    @media (max-width: $tablet) {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+  &__wrapper {
+  }
+
+  &__title {
+    font-size: 64px;
+    font-style: normal;
+    font-family: 'TTRegular';
+    line-height: 110%;
+    text-align: center;
+    color: $white;
+    margin-bottom: 80px;
+    mark {
+      @media (min-width: $mobile) {
+        color: $white;
+        background: linear-gradient(180deg, #faaf1c 0%, #d36718 100%);
+        border-radius: 10px;
+        font-family: 'TTBold';
+        padding: 0px 5px;
+      }
+      @media (max-width: $mobile) {
+        background-color: inherit;
+        color: $white;
+      }
+    }
+    span {
+      font-family: 'TTBold';
+      @media (max-width: $mobile) {
+        font-family: 'TTMedium';
+      }
+    }
+    &_n {
+      font-size: 41px;
+    }
+    @media (max-width: $laptop) {
+      font-size: 44px;
+      max-width: 869px;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 60px;
+      &_n {
+        font-size: 41px;
+      }
+    }
+    @media (max-width: $tablet) {
+      font-size: 44px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 44px;
+      font-size: 32px;
+      font-family: 'TTMedium';
+      margin-bottom: 24px;
+      &_n {
+        font-size: 26px;
+      }
+    }
+    @media (max-width: 390px) {
+      font-size: 23px;
+    }
+  }
+
+  &__body {
+    background-color: $white;
+    width: 440px;
+    //  padding: 40px;
+    border-radius: 16px;
+    margin: 0 auto;
+    padding: 40px;
+    position: relative;
+
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+      padding: 24px;
+    }
+  }
+  &__decor {
+    position: absolute;
+    top: -54px;
+    right: -65px;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+  &__mobile {
+    background-color: $white;
+    width: 440px;
+    //  padding: 40px;
+    border-radius: 16px;
+    margin: 0 auto;
+    padding: 40px;
+    display: none;
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+      padding: 24px;
+    }
+  }
+
+  &__items {
+  }
+
+  &__name {
+    font-size: 31px;
+    font-style: normal;
+    font-family: 'TTBold';
+    line-height: 130%;
+    margin-bottom: 32px;
+    min-height: 81px;
+    @media (max-width: $mobileSmall) {
+      font-size: 24px;
+      min-height: 63px;
+    }
+  }
+
+  &__elements {
+    min-height: 260px;
+  }
+
+  &__element {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    &:hover {
+      .quiz__radio {
+        background-color: $black;
+      }
+    }
+  }
+
+  &__radio {
+    flex: 0 0 16px;
+    height: 16px;
+    border: 1px solid $black;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+
+  &__value {
+    font-size: 20px;
+    font-style: normal;
+    font-family: 'TTRegular';
+  }
+
+  &__item {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    margin-top: 62px;
+    @media (max-width: $mobileSmall) {
+      margin-top: 32px;
+    }
+  }
+
+  &__line {
+    border-radius: 18px;
+    height: 4px;
+    background: #d9d9d9;
+    width: 100%;
+  }
+
+  &__progres {
+    background-color: #237804;
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s;
+  }
+
+  &__number {
+    font-size: 24px;
+    font-style: normal;
+    font-family: 'TTMedium';
+    display: flex;
+  }
+}
+
+.mobile-quiz {
+  &__body {
+  }
+
+  &__name {
+    font-size: 26px;
+    font-style: normal;
+    font-family: 'TTBold';
+    line-height: 120%;
+    margin-bottom: 24px;
+    @media (max-width: $mobileSmall) {
+      font-size: 24px;
+    }
+  }
+  &__subtitle {
+    font-size: 27px;
+    line-height: 140%;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    margin-bottom: 16px;
+    height: 60px;
+    width: 100%;
+    border-radius: 12px;
+    background-color: #faf9f6;
+    color: $black;
+    padding-left: 24px;
+    font-size: 20px;
+    font-style: normal;
+    font-family: 'TTRegular';
+    &::placeholder {
+      color: $black;
+    }
+  }
+
+  &__button {
+    margin-top: 24px;
+    margin-bottom: 32px;
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-style: normal;
+    font-family: 'TTMedium';
+    border-radius: 24px;
+    background: linear-gradient(180deg, #faaf1c 0%, #d36718 100%);
+    color: $white;
+  }
+
+  &__label {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    input {
+      margin-top: 2px;
+    }
+    p {
+      font-size: 14px;
+      font-style: normal;
+      font-family: 'TTRegular';
+      line-height: 140%;
+      span {
+        color: #1890ff;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__checkbox {
+  }
+}

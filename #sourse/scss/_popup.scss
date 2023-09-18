@@ -1,0 +1,172 @@
+body::after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease 0s;
+  pointer-events: none;
+  z-index: 149;
+}
+.popup-show body::after {
+  opacity: 1;
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 30px 10px;
+  transition: visibility 0.8s ease 0s;
+  visibility: hidden;
+  pointer-events: none;
+}
+.popup_show {
+  z-index: 150;
+  visibility: visible;
+  overflow: auto;
+  pointer-events: auto;
+}
+.popup_show .popup__content {
+  visibility: visible;
+  transform: scale(1);
+}
+.popup__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup__content {
+  visibility: hidden;
+  transform: scale(0);
+  transition: transform 0.3s ease 0s;
+  //   background-color: #eee;
+
+  //   border-radius: 20px;
+  .lock & {
+    visibility: visible;
+  }
+}
+.popup-form {
+  padding: 40px;
+  width: 100%;
+  width: 426px;
+  height: 517px;
+  background-color: #faf9f6;
+  border-radius: 24px;
+  position: relative;
+  @media (max-width: $mobileSmall) {
+    width: 100%;
+    padding: 50px 20px 30px 20px;
+  }
+  &__body {
+  }
+
+  &__title {
+    font-size: 32px;
+    font-style: normal;
+    font-family: 'TTMedium';
+    line-height: 120%;
+    margin-bottom: 24px;
+    @media (max-width: $mobileSmall) {
+      font-size: 26px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 27px;
+    line-height: 140%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    margin-bottom: 16px;
+    height: 60px;
+    width: 100%;
+    border-radius: 12px;
+    color: $black;
+    padding-left: 24px;
+    font-size: 20px;
+    font-style: normal;
+    font-family: 'TTRegular';
+    line-height: 140%;
+    &::placeholder {
+      color: $black;
+    }
+  }
+
+  &__number {
+  }
+
+  &__button {
+    height: 93px;
+    width: 100%;
+    border-radius: 24px;
+    background: linear-gradient(180deg, #faaf1c 0%, #d36718 100%);
+    font-size: 32px;
+    font-style: normal;
+    font-family: 'TTMedium';
+    color: $white;
+    transition: opacity 0.3s;
+    margin-bottom: 32px;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__label {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    input {
+      margin-top: 2px;
+    }
+    p {
+      font-size: 14px;
+      font-style: normal;
+      font-family: 'TTRegular';
+      line-height: 140%;
+      span {
+        color: #1890ff;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__checkbox {
+  }
+
+  &__close {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+}
+
+.popup-video {
+  width: 90%;
+  height: 90vh;
+  &__body {
+    width: 100%;
+    height: 100%;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}

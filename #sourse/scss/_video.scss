@@ -1,0 +1,99 @@
+.video {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  @media (max-width: $tablet) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  &__container {
+  }
+
+  &__title {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    text-align: center;
+    margin-bottom: 80px;
+    span {
+      font-family: 'TTMedium';
+    }
+    @media (max-width: $laptop) {
+      margin: 0 auto;
+      margin-bottom: 60px;
+      max-width: 1000px;
+      font-size: 50px;
+    }
+    @media (max-width: $tablet) {
+      font-size: 32px;
+      font-family: 'TTMedium';
+      margin-bottom: 24px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    gap: 40px;
+    @media (max-width: $tablet) {
+      flex-wrap: wrap;
+    }
+    @media (max-width: $mobileSmall) {
+      gap: 24px;
+    }
+  }
+
+  &__item {
+    flex: 0 1 33.333%;
+    text-align: center;
+    @media (max-width: $tablet) {
+      flex: 0 1 calc(50% - 20px);
+    }
+    @media (max-width: $mobileSmall) {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    padding-bottom: 109%;
+    border-radius: 16px;
+    position: relative;
+    margin-bottom: 32px;
+    cursor: pointer;
+    &:hover {
+      .video__play {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+    }
+  }
+
+  &__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    z-index: 2;
+    cursor: pointer;
+    transition: transform 0.3s;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__name {
+    font-size: 24px;
+    font-family: 'TTMedium';
+    margin-bottom: 12px;
+  }
+
+  &__status {
+    font-size: 16px;
+  }
+}
+.ibg {
+}

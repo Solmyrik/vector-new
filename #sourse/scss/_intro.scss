@@ -1,0 +1,163 @@
+.intro {
+  overflow: hidden;
+  max-width: 100vw;
+  &__background {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    @media (min-width: $pc) and (max-height: 600px) {
+      height: 700px;
+    }
+    @media (max-width: $pc) and (max-height: 600px) {
+      height: 600px;
+    }
+  }
+
+  &__container {
+    height: calc(100vh - 94px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $white;
+    @media (min-width: $pc) and (max-height: 600px) {
+      height: 606px;
+    }
+    @media (max-width: $pc) and (max-height: 600px) {
+      height: 506px;
+    }
+  }
+
+  &__body {
+    display: block;
+  }
+
+  &__suptitle {
+    border-radius: 42px;
+    background-color: $purple;
+    width: 260px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-family: 'TTMedium';
+    margin-bottom: 16px;
+    @media (max-width: $laptop) {
+      font-size: 18px;
+      width: 200px;
+      height: 37px;
+    }
+    @media (max-width: $mobile) {
+      display: none;
+    }
+    &_n {
+      gap: 10px;
+      img {
+        width: 24px;
+        @media (max-width: $laptop) {
+          width: 18px;
+        }
+      }
+      @media (max-width: $mobile) {
+        display: flex;
+      }
+    }
+    &_met {
+      @media (max-width: $mobile) {
+        display: flex;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 79px;
+    font-style: normal;
+    font-family: 'TTBold';
+    line-height: 110%;
+    max-width: 1150px;
+    margin-bottom: 40px;
+    @media (max-width: $laptop) {
+      font-size: 55px;
+      max-width: 850px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 32px;
+      max-width: 340px;
+    }
+    &_n {
+      background-color: #070504cc;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+    display: flex;
+    img {
+      width: 32px;
+      height: 32px;
+      margin-right: 12px;
+    }
+    p {
+      font-size: 20px;
+      font-style: normal;
+      font-family: 'TTRegular';
+      line-height: 140%;
+      @media (max-width: $mobile) {
+        font-size: 16px;
+      }
+    }
+    &_n {
+      background-color: #070504cc;
+      display: inline-flex;
+    }
+  }
+
+  &__buttons {
+  }
+
+  &__button {
+    position: relative;
+    width: 381px;
+    height: 93px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, #faaf1c 0%, #d36718 100%);
+    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-size: 32px;
+      font-style: normal;
+      font-family: 'TTMedium';
+      line-height: 140%;
+      color: $white;
+    }
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+    @media (max-width: $tablet) {
+      width: 301px;
+      height: 73px;
+      p {
+        font-size: 22px;
+      }
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+
+  &__sale {
+    position: absolute;
+    right: -50px;
+    top: -30px;
+    @media (max-width: $mobile) {
+      right: -25px;
+      top: -47px;
+    }
+  }
+}

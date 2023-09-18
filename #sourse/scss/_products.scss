@@ -1,0 +1,256 @@
+.products {
+  padding: 120px 0px;
+  @media (max-width: $tablet) {
+    padding: 60px 0px;
+  }
+  @media (max-width: $mobile) {
+    padding: 24px 0px;
+  }
+  &__container {
+  }
+
+  &__title {
+    font-size: 64px;
+    font-style: normal;
+    font-family: 'TTRegular';
+    line-height: 110%;
+    color: $black;
+    margin-bottom: 80px;
+    @media (max-width: $laptop) {
+      font-size: 50px;
+      margin-bottom: 60px;
+    }
+    mark {
+      @media (min-width: $mobile) {
+        color: $white;
+        background-color: $purple;
+        border-radius: 10px;
+        // font-family: 'TTBold';
+        padding: 0px 5px;
+      }
+      @media (max-width: $mobile) {
+        background-color: inherit;
+        color: $black;
+      }
+    }
+    @media (max-width: $tablet) {
+      font-size: 40px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 44px;
+      font-size: 32px;
+      font-family: 'TTMedium';
+      margin-bottom: 24px;
+    }
+  }
+
+  &__body {
+  }
+
+  &__top {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 48px;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__bigimg {
+    flex: 0 1 50%;
+    padding-bottom: 25%;
+    border-radius: 8px;
+    background-color: #faf9f6;
+    @media (max-width: $mobile) {
+      padding-bottom: 70%;
+    }
+  }
+
+  &__left {
+    flex: 0 1 50%;
+  }
+
+  &__name {
+    color: #262626;
+    font-family: 'TTMedium';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 24px;
+    line-height: 120%; /* 38.4px */
+    @media (max-width: $mobile) {
+      font-size: 24px;
+    }
+  }
+
+  &__items {
+  }
+
+  &__item {
+    display: flex;
+    gap: 12px;
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__icon {
+  }
+
+  &__text {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+.ibg {
+}
+.products {
+  &__center {
+  }
+
+  &__bottom {
+  }
+}
+.center-product {
+  margin-bottom: 70px;
+  @media (max-width: $mobile) {
+    margin-bottom: 48px;
+  }
+  &__title {
+    font-family: 'TTMedium';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    color: $black;
+    text-align: center;
+    margin-bottom: 48px;
+    @media (max-width: $mobile) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    gap: 40px;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    flex: 0 1 33.333%;
+  }
+
+  &__image {
+    border-radius: 8px;
+    padding-bottom: 79%;
+    margin-bottom: 16px;
+    background-color: #faf9f6;
+  }
+
+  &__name {
+    font-family: 'TTMedium';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    text-align: center;
+  }
+}
+.ibg {
+}
+.bottom-products {
+  display: flex;
+  position: relative;
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    gap: 24px;
+  }
+  &__sale {
+    position: absolute;
+    right: -51px;
+    bottom: 43.7px;
+    img {
+      width: 102px;
+      height: 102px;
+    }
+    @media (max-width: 1100px) {
+      display: none;
+    }
+  }
+  &__left {
+    flex: 0 1 55%;
+  }
+
+  &__title {
+    font-family: 'TTRegular';
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    color: $black;
+    margin-bottom: 8px;
+    @media (max-width: 1100px) {
+      font-size: 32px;
+    }
+    @media (max-width: $mobile) {
+      font-family: 'TTMedium';
+    }
+  }
+
+  &__text {
+    font-family: 'TTMedium';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    @media (max-width: 1100px) {
+      font-size: 20px;
+    }
+    @media (max-width: $mobile) {
+      font-family: 'TTRegular';
+    }
+  }
+
+  &__right {
+    flex: 0 0 461px;
+    justify-content: end;
+    display: flex;
+    gap: 24px;
+    @media (max-width: $tablet) {
+      flex: auto;
+      justify-content: start;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    display: flex;
+    padding: 16px 24px;
+    border-radius: 24px;
+    background: #faf9f6;
+    align-items: center;
+    gap: 16px;
+    font-family: 'TTMedium';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    color: $black;
+  }
+
+  &__icon {
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
+.telegram3 {
+}
